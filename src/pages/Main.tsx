@@ -14,7 +14,9 @@ const Main = () => {
         <h1 className="text-primary font-bold">{stage.yourType}</h1>
         <p>{stage.result}</p>
         <p>{stage.description}</p>
-        <Button onClick={() => setCurrent(1)}>Restart</Button>
+        <Button className="w-full" onClick={() => setCurrent(1)}>
+          Restart
+        </Button>
       </>
     );
   } else if (stage.type === "question") {
