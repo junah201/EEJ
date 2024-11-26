@@ -3,6 +3,7 @@ interface Question {
   depth: number;
   question: string;
   options: Option[];
+  image: string;
 }
 
 interface Option {
@@ -16,6 +17,7 @@ interface Result {
   result: string;
   yourType: string;
   description: string;
+  image: string;
 }
 
 export const questions = Object.freeze({
@@ -34,6 +36,7 @@ export const questions = Object.freeze({
         next: 3,
       }),
     ],
+    image: "001.jpg",
   }),
   2: Object.freeze({
     type: "question",
@@ -50,6 +53,7 @@ export const questions = Object.freeze({
         next: 5,
       }),
     ],
+    image: "002.jpg",
   }),
   3: Object.freeze({
     type: "question",
@@ -66,6 +70,7 @@ export const questions = Object.freeze({
         next: 7,
       }),
     ],
+    image: "003.jpg",
   }),
   4: Object.freeze({
     type: "result",
@@ -74,6 +79,7 @@ export const questions = Object.freeze({
     yourType: "REALITY",
     description:
       "reflection of a society in which individual efforts are considered important",
+    image: "004.jpg",
   }),
   5: Object.freeze({
     type: "result",
@@ -82,6 +88,7 @@ export const questions = Object.freeze({
     yourType: "REALITY",
     description:
       "reflects a meritocratic society where individual talent is important",
+    image: "005.jpg",
   }),
   6: Object.freeze({
     type: "question",
@@ -98,6 +105,7 @@ export const questions = Object.freeze({
         next: 9,
       }),
     ],
+    image: "006.jpg",
   }),
   7: Object.freeze({
     type: "question",
@@ -114,6 +122,7 @@ export const questions = Object.freeze({
         next: 11,
       }),
     ],
+    image: "007.jpg",
   }),
   8: Object.freeze({
     type: "result",
@@ -123,6 +132,7 @@ export const questions = Object.freeze({
     yourType: "JUSTICE",
     description:
       "Project an ideal society in which a healthy competition society is built by clearly recognizing the purpose of competition.",
+    image: "008.jpg",
   }),
   9: Object.freeze({
     type: "result",
@@ -131,6 +141,7 @@ export const questions = Object.freeze({
     yourType: "REALITY",
     description:
       "Reflects a society where competition itself is overheated without realizing the purpose of competition.",
+    image: "009.jpg",
   }),
   10: Object.freeze({
     type: "result",
@@ -139,6 +150,7 @@ export const questions = Object.freeze({
     yourType: "REALITY",
     description:
       "Represents a society that tries to balance by enhancing the ablities of disadvantaged individuals",
+    image: "010.jpg",
   }),
   11: Object.freeze({
     type: "result",
@@ -147,6 +159,7 @@ export const questions = Object.freeze({
     yourType: "REALITY",
     description:
       "Reflection of a society that seeks solution addressing imbalances through imposing constaints on the advantaged",
+    image: "011.jpg",
   }),
 });
 
