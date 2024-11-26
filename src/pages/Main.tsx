@@ -6,7 +6,7 @@ import { ROUTE_MAP } from "@/constants";
 const Main = () => {
   return (
     <>
-      <div className="flex flex-col gap-y-2">
+      <div className="flex flex-col gap-y-2 w-full">
         <p>
           Have you ever wondered, "What if the rabbit hadn't taken a break?" or
           "What if the rabbit and the turtle had raced in the sea?"

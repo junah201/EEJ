@@ -30,10 +30,12 @@ const Question = () => {
   } else if (stage.type === "question") {
     return (
       <>
-        <h1>
-          <span className="text-primary font-bold">Q{stage.depth}. </span>
-          {stage.question}
-        </h1>
+        <div className="flex flex-col gap-y-2 w-full">
+          <h1>
+            <span className="text-primary font-bold">Q{stage.depth}. </span>
+            {stage.question}
+          </h1>
+        </div>
         <div className="relative max-w-md aspect-square bg-[#F0F3F9]">
           <img
             className="absolute inset-0 w-full h-full object-cover"
