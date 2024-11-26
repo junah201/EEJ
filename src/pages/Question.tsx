@@ -16,7 +16,7 @@ const Question = () => {
           <p>{stage.result}</p>
           <p>{stage.description}</p>
         </div>
-        <div className="relative max-w-md aspect-square bg-[#F0F3F9]">
+        <div className="relative max-w-md w-full aspect-square bg-[#F0F3F9]">
           <img
             className="absolute inset-0 w-full h-full object-cover"
             src={`/images/${stage.image}`}
@@ -36,7 +36,7 @@ const Question = () => {
             {stage.question}
           </h1>
         </div>
-        <div className="relative max-w-md aspect-square bg-[#F0F3F9]">
+        <div className="relative max-w-md w-full aspect-square bg-[#F0F3F9]">
           <img
             className="absolute inset-0 w-full h-full object-cover"
             src={`/images/${stage.image}`}
