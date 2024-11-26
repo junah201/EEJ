@@ -16,8 +16,11 @@ const Question = () => {
           <p>{stage.result}</p>
           <p>{stage.description}</p>
         </div>
-        <div className="aspect-square max-w-md">
-          <img src={`/images/${stage.image}`} className="object-fit" />
+        <div className="relative max-w-md aspect-square bg-[#F0F3F9]">
+          <img
+            className="absolute inset-0 w-full h-full object-cover"
+            src={`/images/${stage.image}`}
+          />
         </div>
         <Button className="w-full" onClick={() => setCurrent(1)}>
           Restart
@@ -31,8 +34,11 @@ const Question = () => {
           <span className="text-primary font-bold">Q{stage.depth}. </span>
           {stage.question}
         </h1>
-        <div className="aspect-square max-w-md">
-          <img src={`/images/${stage.image}`} className="object-fit" />
+        <div className="relative max-w-md aspect-square bg-[#F0F3F9]">
+          <img
+            className="absolute inset-0 w-full h-full object-cover"
+            src={`/images/${stage.image}`}
+          />
         </div>
         <div className="w-full flex gap-2">
           {stage.options.map((option, index) => (
