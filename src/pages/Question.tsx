@@ -1,9 +1,13 @@
 import { useState } from "react";
+import useSound from "use-sound";
+
+import effectSound from "../../public/effect.mp3";
 
 import { Button } from "@/components/ui/button";
 import { questions, QuestionKey } from "@/constants/questions";
 
 const Question = () => {
+  const [play] = useSound(effectSound);
   const [current, setCurrent] = useState<QuestionKey>(1);
 
   const stage = questions[current];
@@ -22,7 +26,12 @@ const Question = () => {
             src={`/images/${stage.image}`}
           />
         </div>
-        <Button className="w-full" onClick={() => setCurrent(1)}>
+        <Button
+          className="w-full"
+          onClick={() => {
+            setCurrent(1);
+          }}
+        >
           Restart
         </Button>
       </>
@@ -46,7 +55,10 @@ const Question = () => {
           {stage.options.map((option, index) => (
             <Button
               key={option.text + option.next + index}
-              onClick={() => setCurrent(option.next)}
+              onClick={() => {
+                play();
+                setCurrent(option.next);
+              }}
               variant={index % 2 === 0 ? "default" : "outline"}
               className="flex-grow text-wrap p-8"
             >

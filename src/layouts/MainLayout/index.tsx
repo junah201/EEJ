@@ -10,8 +10,8 @@ const MainLayout = () => {
         <div className="w-full h-full max-w-screen-md flex flex-grow flex-col bg-white items-center p-4 gap-2">
           <Outlet />
         </div>
+        <audio src="/background.mp3" autoPlay={true}></audio>
       </main>
-      <footer></footer>
     </div>
   );
 };
