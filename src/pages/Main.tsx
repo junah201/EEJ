@@ -61,7 +61,6 @@ const Question = ({ handlePlay }: QuestionProps) => {
               key={option.text + option.next + index}
               onClick={() => {
                 play();
-                console.log(handlePlay);
                 handlePlay();
                 setCurrent(option.next);
               }}
@@ -98,17 +97,15 @@ const Question = ({ handlePlay }: QuestionProps) => {
         >
           Restart
         </Button>
-        {previous && (
-          <Button
-            className="w-full"
-            variant="green"
-            onClick={() => {
-              setCurrent(previous);
-            }}
-          >
-            Previous
-          </Button>
-        )}
+        <Button
+          className="w-full"
+          variant="green"
+          onClick={() => {
+            setCurrent(previous || 0);
+          }}
+        >
+          Previous
+        </Button>
       </>
     );
   } else if (stage.type === "question") {
@@ -141,17 +138,15 @@ const Question = ({ handlePlay }: QuestionProps) => {
             </Button>
           ))}
         </div>
-        {previous && (
-          <Button
-            className="w-full"
-            variant="green"
-            onClick={() => {
-              setCurrent(previous);
-            }}
-          >
-            Previous
-          </Button>
-        )}
+        <Button
+          className="w-full"
+          variant="green"
+          onClick={() => {
+            setCurrent(previous || 0);
+          }}
+        >
+          Previous
+        </Button>
       </>
     );
   }
