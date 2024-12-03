@@ -8,6 +8,7 @@ import { questions, QuestionKey } from "@/constants/questions";
 
 const Main = () => {
   const ref = useRef<HTMLAudioElement>(null);
+  const dialogRef = useRef<HTMLAudioElement>(null);
 
   const handlePlay = () => {
     ref.current?.play();
@@ -18,16 +19,18 @@ const Main = () => {
       <audio ref={ref} id="bgm" autoPlay loop src="/background.mp3">
         <source src="/bgm.mp3" type="audio/mpeg" />
       </audio>
-      <Question handlePlay={handlePlay} />
+      <audio ref={dialogRef} id="dialog" />
+      <Question handlePlay={handlePlay} dialogRef={dialogRef} />
     </>
   );
 };
 
 interface QuestionProps {
   handlePlay: () => void;
+  dialogRef: React.RefObject<HTMLAudioElement>;
 }
 
-const Question = ({ handlePlay }: QuestionProps) => {
+const Question = ({ handlePlay, dialogRef }: QuestionProps) => {
   const [play] = useSound(effectSound);
   const [current, setCurrent] = useState<QuestionKey>(0);
 
@@ -158,7 +161,15 @@ const Question = ({ handlePlay }: QuestionProps) => {
           Previous
         </Button>
         {stage.dialog && (
-          <div className="flex flex-col gap-2">
+          <div
+            className="flex flex-col gap-2 p-2 rounded-md hover:bg-secondary"
+            onClick={() => {
+              if (dialogRef.current) {
+                dialogRef.current.src = `/dialog/${current}.m4a`;
+                dialogRef.current.play();
+              }
+            }}
+          >
             {stage.dialog.map((dialog, index) => (
               <div key={current + dialog.speaker} className="flex gap-2">
                 <h2 className="text-primary font-bold">{dialog.speaker}</h2>
