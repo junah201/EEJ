@@ -51,6 +51,16 @@ export const questions = {
       },
     ],
     image: "001.jpg",
+    dialog: [
+      {
+        speaker: "Rabbit",
+        text: "lets start the race!",
+      },
+      {
+        speaker: "Turtle",
+        text: "Is this race fair?",
+      },
+    ],
   },
   2: {
     type: "question",
@@ -68,6 +78,12 @@ export const questions = {
       },
     ],
     image: "002.jpg",
+    dialog: [
+      {
+        speaker: "Rabbit",
+        text: "I’m so tired… should I take a rest?",
+      },
+    ],
   },
   3: {
     type: "question",
@@ -85,6 +101,16 @@ export const questions = {
       },
     ],
     image: "003.jpg",
+    dialog: [
+      {
+        speaker: "Turtle",
+        text: "I will race in the water and you can race on the ground.",
+      },
+      {
+        speaker: "Rabbit",
+        text: "Or we can use additional tools to make the race fair!",
+      },
+    ],
   },
   4: {
     type: "result",
@@ -120,6 +146,16 @@ export const questions = {
       },
     ],
     image: "006.jpg",
+    dialog: [
+      {
+        speaker: "Rabbit",
+        text: "I will race on the ground. then you race under the water.",
+      },
+      {
+        speaker: "Turtle",
+        text: "Oh, there are other animals! Will they happy to see our race, even though they are not joining?",
+      },
+    ],
   },
   7: {
     type: "question",
@@ -137,6 +173,16 @@ export const questions = {
       },
     ],
     image: "007.jpg",
+    dialog: [
+      {
+        speaker: "Turtle",
+        text: "I can ware running shoes that can enhance my speed!",
+      },
+      {
+        speaker: "Rabbit",
+        text: "Or i can ware flippers that can reduce my speed…",
+      },
+    ],
   },
   8: {
     type: "result",

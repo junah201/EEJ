@@ -106,6 +106,16 @@ const Question = ({ handlePlay }: QuestionProps) => {
         >
           Previous
         </Button>
+        {stage.dialog && (
+          <div className="flex flex-col gap-2">
+            {stage.dialog.map((dialog, index) => (
+              <div key={current + dialog.speaker} className="flex gap-2">
+                <h2 className="text-primary font-bold">{dialog.speaker}</h2>
+                <p>{dialog.text}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </>
     );
   } else if (stage.type === "question") {
@@ -147,6 +157,16 @@ const Question = ({ handlePlay }: QuestionProps) => {
         >
           Previous
         </Button>
+        {stage.dialog && (
+          <div className="flex flex-col gap-2">
+            {stage.dialog.map((dialog, index) => (
+              <div key={current + dialog.speaker} className="flex gap-2">
+                <h2 className="text-primary font-bold">{dialog.speaker}</h2>
+                <p>{dialog.text}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </>
     );
   }
