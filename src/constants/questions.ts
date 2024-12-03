@@ -20,59 +20,73 @@ interface Result {
   image: string;
 }
 
-export const questions = Object.freeze({
-  1: Object.freeze({
+export const questions = {
+  0: {
+    type: "init",
+    description: [
+      `Have you ever wondered, "What if the rabbit hadn't taken a break?" or "What if the rabbit and the turtle had raced in the sea?"`,
+      `This personality test is inspired by the classic fable of the rabbit and the turtle. Every choice you make will reveal whether you place the most value on equity, equality, justice, or reality.`,
+      `This test takes approximately 3 minutes to complete.`,
+    ],
+    options: [
+      {
+        text: "Start Test",
+        next: 1,
+      },
+    ],
+  },
+  1: {
     type: "question",
     depth: 1,
     question:
       "A rabbit and a turtle stand side by side in front of the starting line for the race. Is this race fair?",
     options: [
-      Object.freeze({
+      {
         text: "Yes, it is fair",
         next: 2,
-      }),
-      Object.freeze({
+      },
+      {
         text: "No, not fair",
         next: 3,
-      }),
+      },
     ],
     image: "001.jpg",
-  }),
-  2: Object.freeze({
+  },
+  2: {
     type: "question",
     depth: 2,
     question:
       "The game is held on the land as it is. Will the rabbit choose to rest during the race?",
     options: [
-      Object.freeze({
+      {
         text: "Yes",
         next: 4,
-      }),
-      Object.freeze({
+      },
+      {
         text: "No",
         next: 5,
-      }),
+      },
     ],
     image: "002.jpg",
-  }),
-  3: Object.freeze({
+  },
+  3: {
     type: "question",
     depth: 2,
     question:
       "Then, which is fairer between racing in an environment where each one can perform their ability sufficiently or giving additional tools?",
     options: [
-      Object.freeze({
+      {
         text: "Environment",
         next: 6,
-      }),
-      Object.freeze({
+      },
+      {
         text: "Giving Additional tools",
         next: 7,
-      }),
+      },
     ],
     image: "003.jpg",
-  }),
-  4: Object.freeze({
+  },
+  4: {
     type: "result",
     depth: 3,
     result: "The turtle wins",
@@ -80,8 +94,8 @@ export const questions = Object.freeze({
     description:
       "reflection of a society in which individual efforts are considered important",
     image: "004.jpg",
-  }),
-  5: Object.freeze({
+  },
+  5: {
     type: "result",
     depth: 3,
     result: "The rabbit wins",
@@ -89,42 +103,42 @@ export const questions = Object.freeze({
     description:
       "reflects a meritocratic society where individual talent is important",
     image: "005.jpg",
-  }),
-  6: Object.freeze({
+  },
+  6: {
     type: "question",
     depth: 3,
     question:
       "The race is held in an environment where individuals can fully demonstrate their capabilities. Rabbits race on land and turtles race in the ocean. Will any other animal watching the race question the purpose of the game?",
     options: [
-      Object.freeze({
+      {
         text: "Yes",
         next: 8,
-      }),
-      Object.freeze({
+      },
+      {
         text: "No",
         next: 9,
-      }),
+      },
     ],
     image: "006.jpg",
-  }),
-  7: Object.freeze({
+  },
+  7: {
     type: "question",
     depth: 3,
     question:
       "Which option is fairer for the race: providing the turtle with running shoes with wheels to enhance its speed, or requiring the rabbit to wear filppers to reduce its speed?",
     options: [
-      Object.freeze({
+      {
         text: "Provide the turtle with running shoes with wheels to enhance its speed.",
         next: 10,
-      }),
-      Object.freeze({
+      },
+      {
         text: "Require the rabbit to wear filppers, reducing its speed to balance the competition.",
         next: 11,
-      }),
+      },
     ],
     image: "007.jpg",
-  }),
-  8: Object.freeze({
+  },
+  8: {
     type: "result",
     depth: 4,
     result:
@@ -133,8 +147,9 @@ export const questions = Object.freeze({
     description:
       "Project an ideal society in which a healthy competition society is built by clearly recognizing the purpose of competition.",
     image: "008.jpg",
-  }),
-  9: Object.freeze({
+    restart: 1,
+  },
+  9: {
     type: "result",
     depth: 4,
     result: "The rabbit or turtle wins",
@@ -142,8 +157,8 @@ export const questions = Object.freeze({
     description:
       "Reflects a society where competition itself is overheated without realizing the purpose of competition.",
     image: "009.jpg",
-  }),
-  10: Object.freeze({
+  },
+  10: {
     type: "result",
     depth: 4,
     result: "The turtle wins",
@@ -151,8 +166,8 @@ export const questions = Object.freeze({
     description:
       "Represents a society that tries to balance by enhancing the ablities of disadvantaged individuals",
     image: "010.jpg",
-  }),
-  11: Object.freeze({
+  },
+  11: {
     type: "result",
     depth: 4,
     result: "The turtle wins",
@@ -160,8 +175,8 @@ export const questions = Object.freeze({
     description:
       "Reflection of a society that seeks solution addressing imbalances through imposing constaints on the advantaged",
     image: "011.jpg",
-  }),
-});
+  },
+} as const;
 
 // questions key types
 export type QuestionKey = keyof typeof questions;
