@@ -224,19 +224,27 @@ export const questions = {
     ],
   },
   11: {
-    type: "result",
+    type: "question",
     depth: 4,
-    result: "The turtle wins",
-    yourType: "REALITY",
-    description:
-      "Reflection of a society that seeks solution addressing imbalances through imposing constaints on the advantaged",
+    question: "A rabbit falls down because its flippers are caught in a stone.",
+    options: [
+      {
+        text: "Next",
+        next: 14,
+      },
+    ],
     image: "011.jpg",
+    dialog: [
+      {
+        speaker: "Rabbit",
+        text: "Oh! I got stuck! My ankle!",
+      },
+    ],
   },
   12: {
     type: "question",
     depth: 5,
-    question:
-      "Eventually, the turtle decided to take off its shoes and walk on foot.",
+    question: "A rabbit falls down because its flippers are caught in a stone.",
     options: [
       {
         text: "Next",
@@ -253,6 +261,15 @@ export const questions = {
     description:
       "Represents a society that tries to balance by enhancing the ablities of disadvantaged individuals.",
     image: "013.jpg",
+  },
+  14: {
+    type: "result",
+    depth: 4,
+    result: "The turtle wins",
+    yourType: "REALITY",
+    description:
+      "Reflection of a society that seeks solution addressing imbalances through imposing constaints on the advantaged",
+    image: "014.jpg",
   },
 } as const;
 
