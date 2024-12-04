@@ -185,15 +185,23 @@ export const questions = {
     ],
   },
   8: {
-    type: "result",
+    type: "question",
     depth: 4,
-    result:
-      "Recognizing that the purpose of the competition is to have a good time together, everyone participates in the race. They create teams to participate in the race.",
-    yourType: "JUSTICE",
-    description:
-      "Project an ideal society in which a healthy competition society is built by clearly recognizing the purpose of competition.",
+    question:
+      "The fox has a question about the race between the rabbit and the turtle.",
+    options: [
+      {
+        text: "Next",
+        next: 15,
+      },
+    ],
     image: "008.jpg",
-    restart: 1,
+    dialog: [
+      {
+        speaker: "Fox",
+        text: "What's the purpose of this race if they have a race in different places like that?",
+      },
+    ],
   },
   9: {
     type: "result",
@@ -226,7 +234,7 @@ export const questions = {
   11: {
     type: "question",
     depth: 4,
-    question: "A rabbit falls down because its flippers are caught in a stone.",
+    question: "A rabbit falls down because its flippers are caught in a stone",
     options: [
       {
         text: "Next",
@@ -263,13 +271,94 @@ export const questions = {
     image: "013.jpg",
   },
   14: {
-    type: "result",
+    type: "question",
+    depth: 5,
+    question: "Rabbit hurt her ankle and flopped down.",
+    options: [
+      {
+        text: "Next",
+        next: 19,
+      },
+    ],
+    image: "014.jpg",
+  },
+  15: {
+    type: "question",
     depth: 4,
+    question:
+      "The fox suggested that we play a game that everyone can participate in.",
+    options: [
+      {
+        text: "Next",
+        next: 16,
+      },
+    ],
+    image: "015.jpg",
+    dialog: [
+      {
+        speaker: "Fox",
+        text: "Let's play a game that everyone can participate in and enjoy!",
+      },
+    ],
+  },
+  16: {
+    type: "question",
+    depth: 5,
+    question: "Dog and bird is trying to join the race together.",
+    options: [
+      {
+        text: "Next",
+        next: 17,
+      },
+    ],
+    image: "016.jpg",
+    dialog: [
+      {
+        speaker: "Dog",
+        text: "I can run fast!",
+      },
+      {
+        speaker: "Bird",
+        text: "I can fly high!",
+      },
+    ],
+  },
+  17: {
+    type: "question",
+    depth: 6,
+    question: "A turtle talks to a rabbit, a fox, a dog, and a bird.",
+    options: [
+      {
+        text: "Next",
+        next: 18,
+      },
+    ],
+    image: "017.jpg",
+    dialog: [
+      {
+        speaker: "Turtle",
+        text: "Then let's make a team and race!",
+      },
+    ],
+  },
+  18: {
+    type: "result",
+    depth: 7,
+    result:
+      "Recognizing that the purpose of the competition is to have a good time together, everyone participates in the race. They create teams to participate in the race.",
+    yourType: "JUSTICE",
+    description:
+      "Project an ideal society in which a healthy competition society is built by clearly recognizing the purpose of competition.",
+    image: "018.jpg",
+  },
+  19: {
+    type: "result",
+    depth: 5,
     result: "The turtle wins",
     yourType: "REALITY",
     description:
       "Reflection of a society that seeks solution addressing imbalances through imposing constaints on the advantaged",
-    image: "014.jpg",
+    image: "019.jpg",
   },
 } as const;
 
