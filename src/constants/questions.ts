@@ -205,13 +205,23 @@ export const questions = {
     image: "009.jpg",
   },
   10: {
-    type: "result",
+    type: "question",
     depth: 4,
-    result: "The turtle wins",
-    yourType: "REALITY",
-    description:
-      "Represents a society that tries to balance by enhancing the ablities of disadvantaged individuals",
+    question:
+      "The turtle's shoes with wheels are broken. He is now unable to move forward or backward. Also he got serious injury.",
+    options: [
+      {
+        text: "Next",
+        next: 12,
+      },
+    ],
     image: "010.jpg",
+    dialog: [
+      {
+        speaker: "Turtle",
+        text: "My wheels are broke! I got injured!",
+      },
+    ],
   },
   11: {
     type: "result",
@@ -221,6 +231,27 @@ export const questions = {
     description:
       "Reflection of a society that seeks solution addressing imbalances through imposing constaints on the advantaged",
     image: "011.jpg",
+  },
+  12: {
+    type: "question",
+    depth: 5,
+    question:
+      "Eventually, the turtle decided to take off its shoes and walk on foot.",
+    options: [
+      {
+        text: "Next",
+        next: 13,
+      },
+    ],
+    image: "012.jpg",
+  },
+  13: {
+    type: "result",
+    depth: 4,
+    result: "TODO",
+    yourType: "TODO",
+    description: "TODO",
+    image: "013.jpg",
   },
 } as const;
 
