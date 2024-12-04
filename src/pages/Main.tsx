@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useSound from "use-sound";
 
 import effectSound from "../../public/effect.mp3";
@@ -52,6 +52,18 @@ const Question = ({ handlePlay, dialogRef }: QuestionProps) => {
 
   const previous = getPrevious(current);
   const stage = questions[current];
+
+  useEffect(() => {
+    if (dialogRef.current) {
+      dialogRef.current.pause();
+      setTimeout(() => {
+        if (dialogRef.current) {
+          dialogRef.current.src = `/dialog/${current}.m4a`;
+          dialogRef.current.play();
+        }
+      }, 1000);
+    }
+  }, [current]);
 
   if (stage.type === "init") {
     return (
