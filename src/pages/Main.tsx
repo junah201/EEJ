@@ -35,6 +35,9 @@ const Question = ({ handlePlay, dialogRef }: QuestionProps) => {
   const [current, setCurrent] = useState<QuestionKey>(0);
 
   const getPrevious = (current: QuestionKey) => {
+    if (current <= 1) {
+      return null;
+    }
     const previous = Object.keys(questions).find((key) =>
       (questions[key]?.options || []).some(
         (option: { next: QuestionKey }) => option.next === current
@@ -151,15 +154,17 @@ const Question = ({ handlePlay, dialogRef }: QuestionProps) => {
             </Button>
           ))}
         </div>
-        <Button
-          className="w-full"
-          variant="green"
-          onClick={() => {
-            setCurrent(previous || 0);
-          }}
-        >
-          Previous
-        </Button>
+        {previous !== null && (
+          <Button
+            className="w-full"
+            variant="green"
+            onClick={() => {
+              setCurrent(previous);
+            }}
+          >
+            Previous
+          </Button>
+        )}
         {stage.dialog && (
           <div
             className="flex flex-col gap-2 p-2 rounded-md hover:bg-secondary"
