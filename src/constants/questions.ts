@@ -248,9 +248,10 @@ export const questions = {
   13: {
     type: "result",
     depth: 4,
-    result: "TODO",
-    yourType: "TODO",
-    description: "TODO",
+    result: "The rabbit wins",
+    yourType: "REALITY",
+    description:
+      "Represents a society that tries to balance by enhancing the ablities of disadvantaged individuals.",
     image: "013.jpg",
   },
 } as const;
