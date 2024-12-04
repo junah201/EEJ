@@ -142,7 +142,9 @@ const Question = ({ handlePlay, dialogRef }: QuestionProps) => {
       <>
         <div className="flex flex-col gap-y-2 w-full">
           <h1>
-            <span className="text-primary font-bold">Q{stage.depth}. </span>
+            {stage.options.find((option) => option.text === "Next") ? null : (
+              <span className="text-primary font-bold">Q{stage.depth}. </span>
+            )}
             {stage.question}
           </h1>
         </div>
