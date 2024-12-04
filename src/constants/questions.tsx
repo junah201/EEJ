@@ -176,11 +176,11 @@ export const questions = {
     dialog: [
       {
         speaker: "Turtle",
-        text: "I can ware running shoes that can enhance my speed!",
+        text: "I can wear running shoes that can enhance my speed!",
       },
       {
         speaker: "Rabbit",
-        text: "Or i can ware flippers that can reduce my speed…",
+        text: "Or i can wear flippers that can reduce my speed…",
       },
     ],
   },
