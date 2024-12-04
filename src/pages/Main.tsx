@@ -80,14 +80,15 @@ const Question = ({ handlePlay, dialogRef }: QuestionProps) => {
       </>
     );
   }
-
   if (stage.type === "result") {
     return (
       <>
         <div className="flex flex-col gap-y-2 w-full">
-          <h1 className="text-primary font-bold text-lg">{stage.yourType}</h1>
-          <p>{stage.result}</p>
-          <p>{stage.description}</p>
+          <h1 className="text-primary font-bold text-lg text-center">
+            {stage.yourType}
+          </h1>
+          <p className="text-center">{stage.result}</p>
+          <p className="font-bold text-center">{stage.description}</p>
         </div>
         <div className="relative max-w-md w-full aspect-square bg-[#F0F3F9]">
           <img
@@ -148,7 +149,9 @@ const Question = ({ handlePlay, dialogRef }: QuestionProps) => {
                 setCurrent(option.next);
               }}
               variant={index % 2 === 0 ? "default" : "outline"}
-              className="flex-grow text-wrap p-8"
+              className={`flex-grow text-wrap ${
+                option.text === "Next" ? "" : "p-8"
+              }`}
             >
               {option.text}
             </Button>

@@ -66,7 +66,7 @@ export const questions = {
     type: "question",
     depth: 2,
     question:
-      "The game is held on the land as it is. Will the rabbit choose to rest during the race?",
+      "The game is held on land. Will the rabbit choose to rest during the race?",
     options: [
       {
         text: "Yes",
@@ -118,7 +118,7 @@ export const questions = {
     result: "The turtle wins",
     yourType: "REALITY",
     description:
-      "reflection of a society in which individual efforts are considered important",
+      "Since you reach this conclusion, you tend to pursue a society in which individual efforts are considered important.",
     image: "004.jpg",
   },
   5: {
@@ -127,7 +127,7 @@ export const questions = {
     result: "The rabbit wins",
     yourType: "REALITY",
     description:
-      "reflects a meritocratic society where individual talent is important",
+      "Since you reach this conclusion, you tend to pursue a society in which individual efforts are considered important.",
     image: "005.jpg",
   },
   6: {
@@ -188,7 +188,7 @@ export const questions = {
     type: "question",
     depth: 4,
     question:
-      "The fox has a question about the race between the rabbit and the turtle.",
+      "However, watching the rabbit and the turtle play separately within one game, the fox questioned who the game was for. He hoped that it would be a happy time for everyone.",
     options: [
       {
         text: "Next",
@@ -209,14 +209,14 @@ export const questions = {
     result: "The rabbit or turtle wins",
     yourType: "REALITY",
     description:
-      "Reflects a society where competition itself is overheated without realizing the purpose of competition.",
+      " Since you reach this conclusion, you tend to pursue a society where competition itself is overheated without realizing the purpose of competition.",
     image: "009.jpg",
   },
   10: {
     type: "question",
     depth: 4,
     question:
-      "The turtle's shoes with wheels are broken. He is now unable to move forward or backward. Also he got serious injury.",
+      "The turtle’s shoes with wheels are broken. The broken equipment is no longer functioning, so the turtle is struggling not knowing what to do.",
     options: [
       {
         text: "Next",
@@ -234,7 +234,7 @@ export const questions = {
   11: {
     type: "question",
     depth: 4,
-    question: "A rabbit falls down because its flippers are caught in a stone",
+    question: "The rabbit falls because its flippers are caught in a stone.",
     options: [
       {
         text: "Next",
@@ -252,7 +252,8 @@ export const questions = {
   12: {
     type: "question",
     depth: 5,
-    question: "A rabbit falls down because its flippers are caught in a stone.",
+    question:
+      " Now the turtle has to abandon its equipment and walk to its finish line on its injured legs.",
     options: [
       {
         text: "Next",
@@ -267,13 +268,14 @@ export const questions = {
     result: "The rabbit wins",
     yourType: "REALITY",
     description:
-      "Represents a society that tries to balance by enhancing the ablities of disadvantaged individuals.",
+      " The turtle had to walk to the injured leg and ended up losing to the rabbit. Since you reach this conclusion, you tend to pursue a society that tries to balance by enhancing the abilities of disadvantaged individuals.",
     image: "013.jpg",
   },
   14: {
     type: "question",
     depth: 5,
-    question: "Rabbit hurt her ankle and flopped down.",
+    question:
+      " Rabbit hurt her ankle and flopped down. Now the rabbit has to run to the finish line with its injured ankle.",
     options: [
       {
         text: "Next",
@@ -286,7 +288,7 @@ export const questions = {
     type: "question",
     depth: 4,
     question:
-      "The fox suggested that we play a game that everyone can participate in.",
+      "However, the rabbit couldn't go any further because her ankle hurt so much that she began to whimper.",
     options: [
       {
         text: "Next",
@@ -304,7 +306,8 @@ export const questions = {
   16: {
     type: "question",
     depth: 5,
-    question: "Dog and bird is trying to join the race together.",
+    question:
+      " In the end, the turtle who walked hard in the meantime won. Since you reach this conclusion, you tend to pursue a society that seeks solutions addressing imbalances through imposing constraints on the advantaged.",
     options: [
       {
         text: "Next",
@@ -326,7 +329,8 @@ export const questions = {
   17: {
     type: "question",
     depth: 6,
-    question: "A turtle talks to a rabbit, a fox, a dog, and a bird.",
+    question:
+      "Turtle agreed with a new idea and he thought it would be good to form a team and set up a new way of playing.",
     options: [
       {
         text: "Next",
@@ -344,8 +348,20 @@ export const questions = {
   18: {
     type: "result",
     depth: 7,
-    result:
-      "Recognizing that the purpose of the competition is to have a good time together, everyone participates in the race. They create teams to participate in the race.",
+    result: (
+      <>
+        In the end, various animals were able to form teams on each team to
+        participate in the games. So it became a fun game where all the animals
+        were satisfied.
+        <br />
+        <br />
+        You finally reached JUSTICE!
+        <br />
+        Since you reach this conclusion, you tend to pursue an ideal society in
+        which healthy competition is built by clearly recognizing the purpose of
+        competition.,
+      </>
+    ),
     yourType: "JUSTICE",
     description:
       "Project an ideal society in which a healthy competition society is built by clearly recognizing the purpose of competition.",
