@@ -1,4 +1,9 @@
 {
+  "build": {
+    "env": {
+      "NODE_VERSION": "20.x"
+    }
+  },
   "rewrites": [
     { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/favicon.ico", "destination": "/favicon.ico" },
