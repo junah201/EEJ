@@ -267,15 +267,24 @@ export const questions = {
     depth: 4,
     result: "The rabbit wins",
     yourType: "REALITY",
-    description:
-      "The turtle had to walk to the injured leg and ended up losing to the rabbit. Since you reach this conclusion, you tend to pursue a society that tries to balance by enhancing the abilities of disadvantaged individuals.",
+    description: (
+      <>
+        <span className="font-normal">
+          The turtle had to walk to the injured leg and ended up losing to the
+          rabbit.
+        </span>
+        <br />
+        Since you reach this conclusion, you tend to pursue a society that tries
+        to balance by enhancing the abilities of disadvantaged individuals.
+      </>
+    ),
     image: "013.jpg",
   },
   14: {
     type: "question",
     depth: 5,
     question:
-      "However, the rabbit couldn't go any further because her ankle hurt so much that she began to whimper.",
+      "Rabbit hurt her ankle and flopped down. Now the rabbit has to run to the finish line with its injured ankle. However, the rabbit couldn't go any further because her ankle hurt so much that she began to whimper.",
     options: [
       {
         text: "Next",
@@ -370,7 +379,7 @@ export const questions = {
         <br />
         Since you reach this conclusion, you tend to pursue an ideal society in
         which healthy competition is built by clearly recognizing the purpose of
-        competition.,
+        competition.
       </>
     ),
   },
@@ -384,9 +393,10 @@ export const questions = {
         <span className="font-normal">
           In the end, the turtle who walked hard in the meantime won.{" "}
         </span>
+        <br />
         Since you reach this conclusion, you tend to pursue a society that seeks
         solutions addressing imbalances through imposing constraints on the
-        advantaged.",
+        advantaged.
       </>
     ),
     image: "019.jpg",
