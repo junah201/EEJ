@@ -283,6 +283,12 @@ export const questions = {
       },
     ],
     image: "014.jpg",
+    dialog: [
+      {
+        speaker: "Rabbit",
+        text: "Oh it hurts… I have to run with my injured ankle.",
+      },
+    ],
   },
   15: {
     type: "question",
